@@ -6,8 +6,9 @@ compatibility_date = "2025-02-21"
 binding = "BUCKET"
 bucket_name = "riven-assets"
 
-[[custom_domains]]
-hostname = "cdn.riven.software"
+[[routes]]
+pattern = "cdn.riven.software" 
+custom_domain = true 
 
 [vars]
 ALLOWED_ORIGINS = "*"
