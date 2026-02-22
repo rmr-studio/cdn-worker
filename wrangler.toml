@@ -12,9 +12,19 @@ custom_domain = true
 
 [vars]
 ALLOWED_ORIGINS = "http://localhost:3000,http://localhost:3001,http://localhost:8081,https://riven.software,https://www.riven.software,https://app.riven.software,https://getriven.io,https://app.getriven.io,https://www.getriven.io"
-ALLOWED_REFERERS = "riven.software,www.riven.software,app.riven.software,getriven.io,app.getriven.io,www.getriven.io"
+ALLOWED_REFERERS = "localhost,riven.software,www.riven.software,app.riven.software,getriven.io,app.getriven.io,www.getriven.io"
 
 [observability]
+enabled = true
+head_sampling_rate = 1
+
 [observability.logs]
-enabled = false
+enabled = true
+head_sampling_rate = 1
+persist = true
 invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
