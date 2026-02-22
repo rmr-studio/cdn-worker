@@ -1,0 +1,15 @@
+name = "cdn-worker"
+main = "src/index.ts"
+compatibility_date = "2025-02-21"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "cdn-assets"
+
+# [[custom_domains]]
+# hostname = "cdn.yourdomain.com"
+
+[vars]
+ALLOWED_ORIGINS = "*"
+ALLOWED_REFERERS = ""
+PATH_PREFIX = ""
