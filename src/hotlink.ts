@@ -2,7 +2,7 @@ export function isRefererAllowed(
   request: Request,
   allowedReferers: string,
 ): boolean {
-  if (!allowedReferers.trim()) return true;
+  if (!allowedReferers.trim() || allowedReferers.trim() === "*") return true;
 
   const referer = request.headers.get("Referer");
   if (!referer) return true;
